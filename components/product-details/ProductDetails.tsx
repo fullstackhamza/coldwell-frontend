@@ -274,7 +274,7 @@ export function ProductDetails({ product }: { product: Product }) {
           </div>
 
           <div className="mt-8">
-            <ProductInfoAccordion />
+            <ProductInfoAccordion details={product.details} />
           </div>
         </div>
       </div>

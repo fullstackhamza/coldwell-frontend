@@ -20,6 +20,8 @@ export type Product = {
   /** Sizes that exist for this product but are currently out of stock */
   unavailableSizes?: string[];
   description: string;
+  /** Bullet lines shown under "Product Details" on the product page */
+  details?: string[];
   isNewArrival?: boolean;
   isBestSeller?: boolean;
   /** One-of-a-kind secondhand item. */

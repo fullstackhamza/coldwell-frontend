@@ -14,17 +14,18 @@ function AccordionSection({
     </details>
   );
 }
-
-export function ProductInfoAccordion() {
+export function ProductInfoAccordion({ details }: { details?: string[] }) {
   return (
     <div className="border-t border-line">
-      <AccordionSection title="Product Details">
-        <ul className="flex flex-col gap-1">
-          <li>100% cotton, pre-shrunk fabric</li>
-          <li>Machine wash cold, tumble dry low</li>
-          <li>Imported</li>
-        </ul>
-      </AccordionSection>
+      {details && details.length > 0 && (
+        <AccordionSection title="Product Details">
+          <ul className="flex flex-col gap-1">
+            {details.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </AccordionSection>
+      )}
       <AccordionSection title="Shipping Information">
         <p>
           Standard delivery nationwide in 3–5 business days. Free delivery on
