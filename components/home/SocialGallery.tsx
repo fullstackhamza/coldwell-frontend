@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+﻿import { Instagram } from "lucide-react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/site-config";
 import { Reveal } from "@/components/motion/Reveal";
 
