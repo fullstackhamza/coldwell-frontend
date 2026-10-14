@@ -18,8 +18,3 @@ export const PAKISTAN_PROVINCES = [
   "Azad Jammu & Kashmir",
   "Gilgit-Baltistan",
 ] as const;
-
-// Instagram handle without the @ sign. Change it here and the footer and
-// homepage links both update.
-export const INSTAGRAM_HANDLE = "coldwell.studio";
-export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}`;

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Instagram } from "lucide-react";
 import { footerNav } from "@/lib/navigation";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, SITE_NAME } from "@/lib/site-config";
@@ -53,7 +53,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights
             reserved.
           </p>
-          <p>Cash on Delivery &middot; Online Payment &middot; Bank Transfer</p>
+          <p>Cash on Delivery · Online Payment · Bank Transfer</p>
         </div>
       </div>
     </footer>
