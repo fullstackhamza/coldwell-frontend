@@ -5,6 +5,9 @@
 export const SITE_NAME = "COLDWELL";
 export const SITE_TAGLINE = "Modern everyday fashion";
 
+export const INSTAGRAM_HANDLE = "coldwell.studio";
+export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
+
 export const CURRENCY = "PKR";
 export const STANDARD_DELIVERY_FEE = 200;
 export const FREE_DELIVERY_THRESHOLD = 5000;
