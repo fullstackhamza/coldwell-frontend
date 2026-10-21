@@ -1,6 +1,5 @@
 import { Hero } from "@/components/home/Hero";
 import { NewArrivals } from "@/components/home/NewArrivals";
-import { ShopByCategory } from "@/components/home/ShopByCategory";
 import { BestSellers } from "@/components/home/BestSellers";
 import { PromoBanner } from "@/components/home/PromoBanner";
 import { WhyShopWithUs } from "@/components/home/WhyShopWithUs";
@@ -13,7 +12,6 @@ export default function HomePage() {
     <>
       <Hero />
       <NewArrivals />
-      <ShopByCategory />
       <BestSellers />
       <PromoBanner />
       <WhyShopWithUs />

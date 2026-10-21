@@ -10,7 +10,7 @@ export function MobileMenu({ onClose }: { onClose: () => void }) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
-    <div className="fixed inset-0 z-[60] flex md:hidden">
+    <div className="fixed inset-0 z-[60] flex">
       <motion.button
         aria-label="Close menu"
         onClick={onClose}

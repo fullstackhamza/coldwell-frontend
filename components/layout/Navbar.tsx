@@ -44,22 +44,25 @@ export function Navbar() {
         onMouseLeave={() => setOpenCategory(null)}
       >
         <div className="container-page flex h-16 items-center justify-between md:h-20">
-          {/* Mobile: menu trigger */}
-          <button
-            type="button"
-            className="p-2 -ml-2 md:hidden"
-            aria-label="Open menu"
-            onClick={() => setMobileOpen(true)}
-          >
-            <Menu size={22} strokeWidth={1.5} />
-          </button>
+          {/* Menu button + logo. On phones they sit in the row as before;
+              on laptops they are grouped together on the left. */}
+          <div className="contents md:flex md:items-center md:gap-3">
+            <button
+              type="button"
+              className="p-2 -ml-2"
+              aria-label="Open menu"
+              onClick={() => setMobileOpen(true)}
+            >
+              <Menu size={22} strokeWidth={1.5} />
+            </button>
 
-          <Link
-            href="/"
-            className="font-display text-xl tracking-wide md:text-2xl"
-          >
-            {SITE_NAME}
-          </Link>
+            <Link
+              href="/"
+              className="font-display text-xl tracking-wide md:text-2xl"
+            >
+              {SITE_NAME}
+            </Link>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-8 md:flex" aria-label="Main">

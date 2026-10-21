@@ -104,10 +104,6 @@ export function ProductDetails({ product }: { product: Product }) {
             )}
           </div>
 
-          <p className="mt-5 max-w-[52ch] text-sm text-ink-soft">
-            {product.description}
-          </p>
-
           <div className="mt-6">
             <p className="text-xs uppercase tracking-wide text-ink-soft">
               Color: <span className="text-ink">{selectedColor}</span>
@@ -272,6 +268,17 @@ export function ProductDetails({ product }: { product: Product }) {
               {wishlisted ? "Saved to Wishlist" : "Add to Wishlist"}
             </button>
           </div>
+
+          {product.description && (
+            <div className="mt-8 border-t border-line pt-6">
+              <p className="text-xs uppercase tracking-wide text-ink-soft">
+                Description
+              </p>
+              <p className="mt-3 max-w-[52ch] text-sm leading-relaxed text-ink-soft">
+                {product.description}
+              </p>
+            </div>
+          )}
 
           <div className="mt-8">
             <ProductInfoAccordion />
