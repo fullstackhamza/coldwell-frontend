@@ -306,7 +306,10 @@ export function ProductDetails({ product }: { product: Product }) {
 
       <AnimatePresence>
         {sizeGuideOpen && (
-          <SizeGuideModal onClose={() => setSizeGuideOpen(false)} />
+          <SizeGuideModal
+            onClose={() => setSizeGuideOpen(false)}
+            subcategory={product.subcategory}
+          />
         )}
       </AnimatePresence>
     </div>
