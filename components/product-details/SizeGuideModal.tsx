@@ -62,14 +62,7 @@ const HOODIE_GUIDE: Guide = {
     { label: "Style", value: "Pullover  " },
     { label: "Gender", value: "Unisex" },
   ],
-  fitPoints: [
-    "Dropped shoulders",
-    "Wide chest",
-    "Boxy silhouette",
-    "Slightly shorter body length (not cropped)",
-    "Relaxed & wide sleeves",
-    "Ribbed cuffs & hem",
-  ],
+ 
   note: "Measurements may vary by ±0.5 inch.",
 };
 
