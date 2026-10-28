@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Star } from "lucide-react";
+import { Heart, MessageCircle, Star } from "lucide-react";
 import type { Product } from "@/lib/types";
 import { formatPrice, discountPercent } from "@/lib/format";
 import { useCart } from "@/components/cart/CartProvider";
+import { SITE_URL } from "@/lib/site-config";
+import { whatsappUrl } from "@/lib/whatsapp";
 import { ProductGallery } from "./ProductGallery";
 import { SizeGuideModal } from "./SizeGuideModal";
 import { ProductInfoAccordion } from "./ProductInfoAccordion";
@@ -25,6 +27,10 @@ export function ProductDetails({ product }: { product: Product }) {
   const [addedConfirmation, setAddedConfirmation] = useState(false);
   const [sizeGuideOpen, setSizeGuideOpen] = useState(false);
   const [wishlisted, setWishlisted] = useState(false);
+
+  const whatsappLink = whatsappUrl(
+    `Hi Coldwell, I'd like to know more about "${product.name}". ${SITE_URL}/product/${product.slug}`,
+  );
 
   const discount = discountPercent(product.price, product.compareAtPrice);
   const hasSizes = product.sizes.length > 0;
@@ -267,6 +273,18 @@ export function ProductDetails({ product }: { product: Product }) {
               />
               {wishlisted ? "Saved to Wishlist" : "Add to Wishlist"}
             </button>
+
+            {whatsappLink && (
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-2 text-sm text-ink-soft transition hover:text-ink"
+              >
+                <MessageCircle size={16} strokeWidth={1.5} className="text-ink" />
+                Ask about this on WhatsApp
+              </a>
+            )}
           </div>
 
           {product.description && (

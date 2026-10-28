@@ -7,6 +7,7 @@ import "@fontsource-variable/manrope/wght.css";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site-config";
@@ -30,6 +31,7 @@ export default function RootLayout({
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <WhatsAppButton />
           </CartProvider>
         </AuthProvider>
       </body>

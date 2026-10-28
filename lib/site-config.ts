@@ -5,6 +5,14 @@
 export const SITE_NAME = "COLDWELL";
 export const SITE_TAGLINE = "Modern everyday fashion";
 
+// Your public website address. Used in the links people send you on WhatsApp.
+export const SITE_URL = "https://coldwell.store";
+
+// The WhatsApp number customers message. Type it the normal way, for example
+// "0300 1234567" or "+92 300 1234567". Leave it empty to hide all WhatsApp
+// buttons.
+export const WHATSAPP_NUMBER = "03001234567";
+
 export const INSTAGRAM_HANDLE = "coldwell.studio";
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
 
