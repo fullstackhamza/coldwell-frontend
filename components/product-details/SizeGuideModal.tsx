@@ -59,7 +59,7 @@ const HOODIE_GUIDE: Guide = {
   details: [
     { label: "Fit", value: "Boxy / Oversized" },
     { label: "Fabric", value: "320 – 350 GSM" },
-    { label: "Style", value: "Pullover & Zip-up (same measurements)" },
+    { label: "Style", value: "Pullover  " },
     { label: "Gender", value: "Unisex" },
   ],
   fitPoints: [
