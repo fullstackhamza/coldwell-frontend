@@ -2,7 +2,7 @@ import type { Product, ProductColor } from "@/lib/types";
 import { apiFetch, ApiError, API_URL } from "@/lib/api-client";
 
 export type ProductQuery = {
-  category?: "Men" | "Women";
+  category?: "Men" | "Women" | "Unisex";
   subcategory?: string[];
   colors?: string[];
   sizes?: string[];
@@ -39,6 +39,19 @@ function buildQueryString(query: ProductQuery): string {
 export async function fetchProducts(query: ProductQuery = {}): Promise<Product[]> {
   const qs = buildQueryString(query);
   return apiFetch<Product[]>(`/api/products${qs ? `?${qs}` : ""}`);
+}
+
+/** Products for the Men or Women pages: that department plus every Unisex
+ * product, so Unisex items appear in both. */
+export async function fetchDepartmentProducts(
+  department: "Men" | "Women",
+  query: Omit<ProductQuery, "category"> = {},
+): Promise<Product[]> {
+  const [own, unisex] = await Promise.all([
+    fetchProducts({ ...query, category: department }),
+    fetchProducts({ ...query, category: "Unisex" }),
+  ]);
+  return [...own, ...unisex];
 }
 
 /** Same as fetchProducts, but also returns the total match count (from the
@@ -92,7 +105,7 @@ export async function fetchProductBySlug(slug: string): Promise<Product | null> 
 export type ProductInput = {
   slug: string;
   name: string;
-  category: "Men" | "Women";
+  category: "Men" | "Women" | "Unisex";
   subcategory: string;
   price: number;
   compareAtPrice?: number;

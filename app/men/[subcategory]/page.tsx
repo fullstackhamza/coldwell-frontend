@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShopListing } from "@/components/shop/ShopListing";
-import { fetchProducts } from "@/lib/api/products";
+import { fetchDepartmentProducts } from "@/lib/api/products";
 import { getSubcategoryLabel } from "@/lib/navigation";
 
 export const dynamic = "force-dynamic";
@@ -19,8 +19,7 @@ export default async function MenSubcategoryPage({ params }: Props) {
   const label = getSubcategoryLabel("Men", subcategory);
   if (!label) notFound();
 
-  const products = await fetchProducts({
-    category: "Men",
+  const products = await fetchDepartmentProducts("Men", {
     subcategory: [label],
   });
 

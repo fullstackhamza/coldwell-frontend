@@ -7,7 +7,7 @@ export type Product = {
   id: string;
   slug: string;
   name: string;
-  category: "Men" | "Women";
+  category: "Men" | "Women" | "Unisex";
   subcategory: string;
   price: number;
   /** Present only when the item is on sale */

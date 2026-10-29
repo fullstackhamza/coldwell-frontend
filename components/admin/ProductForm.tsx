@@ -34,7 +34,7 @@ export function ProductForm({
 
   const [slug, setSlug] = useState(initialProduct?.slug ?? "");
   const [name, setName] = useState(initialProduct?.name ?? "");
-  const [category, setCategory] = useState<"Men" | "Women">(
+  const [category, setCategory] = useState<"Men" | "Women" | "Unisex">(
     initialProduct?.category ?? "Men",
   );
   const [subcategory, setSubcategory] = useState(
@@ -219,10 +219,11 @@ export function ProductForm({
             <select
               className={inputClass}
               value={category}
-              onChange={(e) => setCategory(e.target.value as "Men" | "Women")}
+              onChange={(e) => setCategory(e.target.value as "Men" | "Women" | "Unisex")}
             >
               <option value="Men">Men</option>
               <option value="Women">Women</option>
+              <option value="Unisex">Unisex (shows in Men and Women)</option>
             </select>
           </label>
           <label className="flex flex-col gap-1.5">
