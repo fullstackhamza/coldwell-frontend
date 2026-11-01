@@ -15,8 +15,6 @@ export const mainNav: NavCategory[] = [
     href: "/men",
     viewAllHref: "/men",
     subcategories: [
-      { label: "T-Shirts", href: "/men/t-shirts" },
-      { label: "Jeans", href: "/men/jeans" },
       { label: "Hoodies", href: "/men/hoodies" },
       { label: "Jackets", href: "/men/jackets" },
     ],
@@ -26,14 +24,8 @@ export const mainNav: NavCategory[] = [
     href: "/women",
     viewAllHref: "/women",
     subcategories: [
-      { label: "T-Shirts", href: "/women/t-shirts" },
-      { label: "Tops", href: "/women/tops" },
-      { label: "Dresses", href: "/women/dresses" },
-      { label: "Jeans", href: "/women/jeans" },
-      { label: "Trousers", href: "/women/trousers" },
       { label: "Hoodies", href: "/women/hoodies" },
       { label: "Jackets", href: "/women/jackets" },
-      { label: "Accessories", href: "/women/accessories" },
     ],
   },
   { label: "New Arrivals", href: "/new-arrivals" },
