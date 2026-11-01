@@ -143,7 +143,7 @@ export function FilterPanel({
 
       <FilterSection title="Collection">
         <div className="flex flex-col gap-2.5">
-          {["New Arrivals", "Best Sellers"].map((collection) => (
+          {["New Arrivals"].map((collection) => (
             <label
               key={collection}
               className="flex cursor-pointer items-center gap-2 text-sm text-ink-soft"
