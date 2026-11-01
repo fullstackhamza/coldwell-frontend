@@ -72,39 +72,24 @@ export function Hero() {
   return (
     <section className="container-page grid grid-cols-1 items-center gap-10 py-10 md:grid-cols-2 md:py-16 lg:grid-cols-[1fr_1.5fr]">
       <motion.div
-        className="order-2 md:order-1"
+        className="order-2 flex flex-col justify-center md:order-1"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <motion.p
+        <motion.div
           variants={item}
-          className="text-sm uppercase tracking-wide text-oxblood"
+          className="flex w-full max-w-sm flex-col gap-4"
         >
-          New Season
-        </motion.p>
-        <motion.h1
-          variants={item}
-          className="mt-3 font-display text-5xl leading-[1.05] text-ink md:text-6xl"
-        >
-          Discover
-          <br />
-          your style
-        </motion.h1>
-        <motion.p variants={item} className="mt-5 max-w-[38ch] text-ink-soft">
-          Considered basics and standout pieces, built for how Pakistan
-          actually gets dressed — day to day, season to season.
-        </motion.p>
-        <motion.div variants={item} className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/men"
-            className="rounded-sm bg-ink px-7 py-3 text-sm uppercase tracking-wide text-paper transition hover:bg-oxblood"
+            className="block rounded-sm bg-ink px-7 py-4 text-center text-sm uppercase tracking-wide text-paper transition hover:bg-oxblood"
           >
             Shop Men
           </Link>
           <Link
             href="/women"
-            className="rounded-sm border border-ink px-7 py-3 text-sm uppercase tracking-wide text-ink transition hover:border-oxblood hover:text-oxblood"
+            className="block rounded-sm border border-ink px-7 py-4 text-center text-sm uppercase tracking-wide text-ink transition hover:border-oxblood hover:text-oxblood"
           >
             Shop Women
           </Link>
