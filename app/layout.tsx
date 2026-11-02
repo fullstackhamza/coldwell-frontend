@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import "@fontsource-variable/fraunces/wght-italic.css";
 import "@fontsource-variable/manrope/wght.css";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -34,6 +35,7 @@ export default function RootLayout({
             <WhatsAppButton />
           </CartProvider>
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
